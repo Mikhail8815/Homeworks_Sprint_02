@@ -3,9 +3,13 @@
 }
 
 .hw {
-
+    max-width: 1280px;
+    max-height: 373px;
 }
 
 .hwTitle {
-
+    font-family: Montserrat, sans-serif;
+    font-weight: 600;
+    font-size: 22px;
+    color: #000;
 }
