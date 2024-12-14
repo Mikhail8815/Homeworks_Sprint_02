@@ -3,8 +3,11 @@
 }
 
 .hw {
-    max-width: 1280px;
-    max-height: 373px;
+    max-width: 1200px;
+
+    margin: 0 auto;
+    border-bottom: 1px solid #212A34;
+    border-top: 1px solid #212A34;
 }
 
 .hwTitle {
