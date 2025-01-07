@@ -5,12 +5,15 @@
 }
 
 .inputs {
+    margin: 50px 50px;
     display: flex;
     flex-direction: column;
     gap: 48px;
 }
 
 .buttons {
+    margin: 50px 50px;
+    align-items: center;
     display: flex;
     flex-direction: column;
     gap: 24px;

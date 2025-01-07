@@ -16,8 +16,8 @@ type SuperCheckboxPropsType = Omit<DefaultInputPropsType, 'type'> & {
 
 const SuperCheckbox: React.FC<SuperCheckboxPropsType> = (
     {
-        onChange,
-        onChangeChecked,
+        onChange, // {(e) => setChecked(e.currentTarget.checked)}
+        onChangeChecked, //setChecked
         className,
         spanClassName,
         children, // в эту переменную попадёт текст, типизировать не нужно так как он затипизирован в React.FC
@@ -27,8 +27,13 @@ const SuperCheckbox: React.FC<SuperCheckboxPropsType> = (
     }
 ) => {
     const onChangeCallback = (e: ChangeEvent<HTMLInputElement>) => {
+        // onChange ? onChange(e) : onChangeChecked(e.currentTarget.checked)
         // задачка на написание онченджа
-
+        if (onChange) {
+            onChange(e)
+        } else if (onChangeChecked) {
+            onChangeChecked(e.currentTarget.checked)
+        }
     }
 
     const finalInputClassName = s.checkbox
